@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark manager-project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <label class="switch">
+  <input type="checkbox" id="darkModeToggle">
+  <span class="slider"></span>
+</label>
+  <body>
+
+    <input type="text" id="searchInput" placeholder="Search bookmarks..." />
+
+    <form id="addBookmarkForm">
+  <input type="text" id="titleInput" placeholder="Bookmark Title" required />
+  <input type="url" id="urlInput" placeholder="Bookmark URL" required />
+  <button type="submit">Add Bookmark</button>
+</form>
+  <!-- ⚙️ Gear Icon Toggle -->
+<button id="settingsToggle">⚙️</button>
+
+<!-- 🧊 Advanced Settings Panel -->
+<div id="settingsPanel" style="display: none;">
+  <h3>Dashboard Settings</h3>
+
+  <div class="setting-group">
+    <label for="themeToggle">🌗 Theme</label>
+    <select id="themeToggle">
+      <option value="auto">Auto</option>
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
+  </div>
+
+  <div class="setting-group">
+    <label for="layoutToggle">📐 Layout</label>
+    <select id="layoutToggle">
+      <option value="grid">Grid</option>
+      <option value="list">List</option>
+    </select>
+  </div>
+
+  <div class="setting-group">
+    <button id="clearBookmarks">🗑️ Clear All Bookmarks</button>
+  </div>
+</div>
+
+    
+    <h1><h1 style="font-family: 'Comic Sans MS'; color: #751bd5;">My Bookmarks</h1></h1>    
+    <h2><h2 style="font-family: 'Comic Sans MS'; color: #ff0000;">Primary Bookmarks</h2></h2>
+    
+        <div class="bookmark">
+    <img width="30" src="google.png" alt="Google Logo">
+    <a target="_blank" href="https://www.google.com">Open Google</a>
+    <button class="remove-btn">❌</button>
+
+</div>
+
+    
+     <div class="bookmark">
+    <img src="youtube.png" alt="YouTube Logo">
+    <a href="https://www.youtube.com" target="_blank">Open YouTube</a>
+    <button class="remove-btn">❌</button>
+
+</div> 
+
+    <div class="bookmark">
+    <img src="facebook.png" alt="YouTube Logo">
+    <a href="https://www.facebook.com" target="_blank">Open facebook</a>
+    <button class="remove-btn">❌</button>
+
+</div> 
+
+    <div class="bookmark">
+    <img src="quora.png" alt="Quora Logo">
+    <a href="https://www.quora.com" target="_blank">Open Quora</a>
+      <button class="remove-btn">❌</button>
+
+</div> 
+    
+    <div class="bookmark">
+    <img src="canva.png" alt="Canva Logo">
+    <a href="https://www.canva.com" target="_blank">Open Canva</a>
+      <button class="remove-btn">❌</button>
+
+</div> 
+
+    <div class="bookmark">
+    <img src="instagram.jpeg" alt="Instagram Logo">
+    <a href="https://www.instagram.com" target="_blank">Open Instagram</a>
+      <button class="remove-btn">❌</button>
+
+</div> 
+
+    <h2><h2 style="font-family: 'Comic Sans MS'; color: #ff0000;">Secondary Bookmarks</h2></h2>
+
+    <div class="bookmark">
+    <img src="wikipedia.png" alt="Wikipedia Logo">
+    <a href="https://www.wikipedia.com" target="_blank">Open Wikipedia</a>
+      <button class="remove-btn">❌</button>
+
+</div>
+
+    <div class="bookmark">
+    <img src="karan aujla.png" alt="KaranAujlaOfficial Logo"><a target="_blank" 
+    href="https://www.youtube.com/@KaranAujlaOfficial/videos">Open Karan Aujla Official</a>
+    <button class="remove-btn">❌</button>
+
+</div> 
+
+    <div class="bookmark">
+    <img src="dhruv rathee.jpeg" alt="Dhruvrathee logo">
+    <a target="_blank" href="https://www.youtube.com/@dhruvrathee/videos">Open Dhruv Rathee Channel</a>
+      <button class="remove-btn">❌</button>
+
+</div> 
+
+    <script src="script.js"></script>
+
+  <script>
+document.getElementById("toggle-mode").addEventListener("click", function() {
+    document.getElementById("darkModeToggle")
+});
+</script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", function () {
+      const filter = this.value.toLowerCase();
+      const bookmarks = document.querySelectorAll(".bookmark");
+
+      bookmarks.forEach(bookmark => {
+        const text = bookmark.textContent.toLowerCase();
+        bookmark.style.display = text.includes(filter) ? "flex" : "none";
+      });
+    });
+  });
+
+</script>
+  </body>
+</html>
+

@@ -1,0 +1,358 @@
+body {
+  background-color: rgb(183, 194, 174);
+  color: black;
+}
+.bookmark {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bookmark img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.bookmark a:hover {
+    text-shadow: 0 0 5px #9d5df5, 0 0 10px #9d5df5;
+    color: #a020f0;
+    transition: all 0.3s ease-in-out;
+}
+
+.bookmark img:hover {
+    box-shadow: 0 0 8px #b76df7;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+/* Base (Light Mode) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button#toggle-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    background-color: #dddddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-mode .bookmark a {
+    color: #c38fff;
+}
+
+body.dark-mode .bookmark a:hover {
+    text-shadow: 0 0 8px #d3a2ff;
+}
+
+body.dark-mode #toggle-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "☀️";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #5d3fd3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+  content: "🌙";
+}
+body.dark-mode .bookmark a {
+  color: #c38fff; /* Light violet */
+}
+
+body.dark-mode .bookmark a:hover {
+  text-shadow: 0 0 8px #d3a2ff;
+  color: #e0b3ff;
+}
+body.dark-mode .bookmark a {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+.bookmark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: floatIn 0.6s forwards;
+}
+
+/* Float-in animation */
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.bookmark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+
+  /* Frosted glass magic */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+body.dark-mode .bookmark {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.bookmark {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body {
+  background: linear-gradient(135deg, #ffffff, #3a2f4f);
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background: linear-gradient(135deg, #0f0f1a, #452b60);
+}
+#searchInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #searchInput {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+#searchInput {
+  background-color: rgba(255, 255, 255, 0.7); /* Slightly translucent white */
+  color: #1a1a1a; /* Deep gray or black text */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Optional for contrast */
+}
+#searchInput {
+  font-weight: 500;
+}
+.bookmark {
+  display: flex;
+}
+.remove-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+  color: #f55;
+  transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+  color: #c00;
+}
+form#addBookmarkForm {
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+#addBookmarkForm input,
+#addBookmarkForm button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+#addBookmarkForm input {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+#addBookmarkForm button {
+  background-color: rgba(0, 123, 255, 0.6);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#addBookmarkForm button:hover {
+  background-color: rgba(0, 123, 255, 0.85);
+}
+
+#addBookmarkForm input:focus {
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.5);
+}
+#addBookmarkForm button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(145deg, rgba(0,123,255,0.6), rgba(0,123,255,0.4));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2),
+              0 4px 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#addBookmarkForm button:hover {
+  background: linear-gradient(145deg, rgba(0,123,255,0.7), rgba(0,123,255,0.55));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.3),
+              0 6px 14px rgba(0,0,0,0.4);
+}
+#searchInput {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25),
+              inset 0 1px 2px rgba(255,255,255,0.1);
+}
+#searchInput {
+  background-image: url('search-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  padding-left: 40px;
+}
+#searchInput:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(0,123,255,0.4), 0 0 30px rgba(0,123,255,0.15);
+}
+#searchInput::placeholder {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#searchInput:focus::placeholder {
+  opacity: 0.3;
+}
+#settingsPanel {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+#settingsPanel {
+  position: relative;
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.4s ease;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#settingsToggle {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#settingsToggle:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
